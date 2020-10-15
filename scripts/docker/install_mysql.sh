@@ -19,9 +19,9 @@
 declare -a packages
 
 if [[ "${1}" == "dev" ]]; then
-    packages=("libmysqlclient-dev" "mysql-client")
+    packages=("libmariadb-dev-compat" "default-mysql-client")
 elif [[ "${1}" == "prod" ]]; then
-    packages=("libmysqlclient21" "mysql-client")
+    packages=("libmariadb-dev-compat" "default-mysql-client")
 else
     echo
     echo "Specify either prod or dev"
